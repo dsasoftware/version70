@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- MENU ACCOUNT -->
+        <menuitem name="Localizacion Peru" id="admin_cont_config_peru" parent="account.menu_finance" sequence="10" />
+        <menuitem name="Datos Ubigeo" id="cont_config_peru" parent="admin_cont_config_peru" />
+
+
+        <menuitem name="Pais" id="cont_config_state_1" parent="cont_config_peru"  sequence="-1"
+			action="action_country_1"/>
+
+        <menuitem name="Departamento" id="cont_config_state" parent="cont_config_peru"  sequence="1"
+			action="action_country_state"/>
+
+	    <menuitem name="Provincias" id="cont_config_province" parent="cont_config_peru"  sequence="2"
+			action="action_country_province"/>
+
+        <menuitem name="Distrito" id="cont_config_distrito" parent="cont_config_peru"  sequence="3"
+			action="action_country_distrito"/>
+        <menuitem name="Vias" id="cont_config_via" parent="cont_config_peru"  sequence="4"
+			action="action_country_via"/>
+
+        <menuitem name="Zonas" id="cont_config_zonas" parent="cont_config_peru"  sequence="5"
+			action="action_country_zonas"/>
+
+        <menuitem name="Config. SPOT" id="cont_config_detraciones" parent="l10n_pe_yaros.admin_cont_config_peru"
+            action="open_account_voucher_type"/>
+
+
+        <menuitem name="Tipo Doc. de Pago" id="cont_config_secuen" parent="l10n_pe_yaros.admin_cont_config_peru"
+		    action="action_sale_typedocument"/>
+
+        <menuitem name="Modos de Pago" id="menu_open_payment_mode_type" parent="l10n_pe_yaros.admin_cont_config_peru"
+                  action="open_payment_mode_type"/>
+
+        <menuitem name="Tipo de Actividad" id="menu_pe_account_template_rh_activytytype" parent="l10n_pe_yaros.admin_cont_config_peru"
+		    action="action_pe_account_template_rh_activitytype_form_view"/>
+
+        <!-- FIN ACCOUNT -->
+        <!-- MENUS RRRHH -->
+        <menuitem name="Config. RRHH Peru" id="menu_pe_rh_0" parent="hr.menu_hr_configuration" sequence="2"/>
+	    <menuitem name="Empleado" id="menu_pe_rh" parent="menu_pe_rh_0" sequence="1"/>
+       	    <menuitem name="Tipo Documento" id="pe_base_typedoc_" parent="menu_pe_rh"
+    		    action="pe_base_typedoc_form_view"/>
+
+            <menuitem name="Nivel Educación" id="pe_rh_educationlevel" parent="menu_pe_rh"
+                action="pe_rh_educationlevel_form_view"/>
+
+            <menuitem name="Situación Trabajador" id="pe_rh_sitacuon" parent="menu_pe_rh"
+                action="pe_rh_sitacion_form_tree"/>
+
+        <menuitem name="Contratos" id="menu_pe_rh_contrat" parent="l10n_pe_yaros.menu_pe_rh_0" sequence="2"/>
+        <menuitem name="Ocupación" id="pe_rh_ocupation" parent="menu_pe_rh_contrat"
+		    action="pe_rh_ocupation_form_view"/>
+        <menuitem name="Tipo Empleado" id="pe_rh_tipoempleado" parent="menu_pe_rh_contrat"
+                action="action_pe_rh_tipoempleado_form_view"/>
+        <menuitem name="Regimen Pensionario" id="pe_rh_regimenp" parent="menu_pe_rh_contrat"
+		    action="action_pe_rh_regimenp_form_tree"/>
+        <menuitem name="Tipo Contrato Sunat" id="pe_rh_tipocontrato" parent="menu_pe_rh_contrat"
+		action="action_pe_rh_tipocntrato_form_view"/>
+
+        <menuitem name="Motivo Baja" id="pe_rh_motivobaja" parent="menu_pe_rh_contrat"
+            action="action_pe_rh_motivobaja_form_tree"/>
+
+        <menuitem name="Movilidad Formativa" id="pe_rh_motivobaja" parent="menu_pe_rh_contrat"
+            action="action_pe_rh_movformativa_form_tree"/>
+
+        <menuitem name="Categoria Ocupacional" id="pe_rh_categoriaocup" parent="menu_pe_rh_contrat"
+            action="action_pe_rh_categoriaocup_form_tree"/>
+
+        <menuitem name="Categoria Ocupacional" id="pe_rh_ocupprivate" parent="menu_pe_rh_contrat"
+            action="action_pe_rh_ocupprivate_form_tree"/>
+
+	    <menuitem name="Tipo Suspención" id="pe_rh_suspentiontype" parent="menu_pe_rh_contrat"
+		    action="action_pe_rh_suspentiontype_form_tree"/>
+
+        <!-- FIN RRHH -->
+
+
+    </data>
+</openerp>

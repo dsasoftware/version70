@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+		<!--CATALOGO DE EXISTENCIAS-->
+		<record model="account.existencecatalog" id="1"><field name="name">NACIONES UNIDAS</field><field name="code">1</field></record>
+		<record model="account.existencecatalog" id="2"><field name="name">GS1 (EAN-UCC)</field><field name="code">3</field></record>
+		<record model="account.existencecatalog" id="3"><field name="name">OTROS</field><field name="code">9</field></record>
+		
+    </data>
+</openerp>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- Inicio Vista Configuracion Tipo Documento -->
+		<record model="ir.ui.view" id="sale_typedocument_config_tree_view">
+            <field name="name">Configuracion Documentos</field>
+            <field name="model">sale.typedocument.config</field>
+            
+            <field name="arch" type="xml">
+                <tree string="Tipo Comprobante de Pago" editable="top" >
+                    <field name="name" widget="selection"/>
+                    <field name="sale_type" />
+                    <field name="account_id" />
+                    <field name="currency_id" />
+                </tree>
+            </field>
+        </record>        
+        <record model="ir.actions.act_window" id="action_sale_typedocument_config">
+			<field name="name">Config. Comprobante Pago</field>
+			<field name="res_model">sale.typedocument.config</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+	</record>        
+    <!-- Fin Vista Configuracion Tipo Documento -->
+
+    <!--   Ventas  FORM-->
+    <record model="ir.ui.view" id="account_invoice_supplier_form">
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="l10n_pe_yaros.account_invoice_form" />
+        <field name="arch" type="xml">
+            <field name='sale_type_document' position='replace'/>
+            <field name="serie" position="before">
+                <field name="sale_type_document" on_change="onchange_account_sale(sale_type_document, 'sale', currency_id)"
+                       domain="[('is_venta','=',True)]" widget="selection"/>
+            </field>
+        </field>
+    </record>
+    <!--   Compras  FORM-->
+    <record model="ir.ui.view" id="account_invoice_supplier_config_form">
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="l10n_pe_yaros.account_invoice_supplier_form" />
+        <field name="arch" type="xml">
+            <field name='sale_type_document' position='replace'/>
+            <field name="serie" position="before">
+                <field name="sale_type_document" domain="[('is_compra','=',True)]"
+                   on_change="onchange_account_sale(sale_type_document, 'purchase', currency_id)" widget="selection" />
+            </field>
+        </field>
+    </record>
+    </data>
+</openerp>

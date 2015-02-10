@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+		<record model="ir.ui.view" id="sale_typedocument_form_view1">
+            <field name="name">Secuencias de documentos</field>
+            <field name="model">sale.typedocument</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="l10n_pe_yaros.sale_typedocument_form_view" /> 
+            <field name="arch" type="xml">
+				<field name="is_compra" position="after">
+				    <field name="generates">
+						<tree editable="top">
+							<field name="sale_shop_id"/>
+							<field name="serie"/>
+							<field name="number_next"/>
+							<field name="padding"/>							
+						</tree>
+					</field>                
+                </field>
+            </field>
+        </record>   
+        		
+	<record model="ir.actions.act_window" id="action_sale_typedocument_generate">
+			<field name="name">Numero Correlativos Tipo Documento</field>
+			<field name="res_model">sale.typedocument.generate</field>
+			<field name="view_type">form</field>
+			<field name="view_id" ref="sale_typedocument_form_view1" /> 
+			<field name="view_mode">tree,form</field>
+	</record>        
+    </data>
+</openerp>

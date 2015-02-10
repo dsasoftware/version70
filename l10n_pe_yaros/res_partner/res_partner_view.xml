@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!--   CLIENTE Y PROVEEDOR  -->
+        <record model="ir.ui.view" id="base_view_partner_form">
+            <field name="name">res.partner.form</field>
+            <field name="model">res.partner</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="base.view_partner_form" />
+            <field name="arch" type="xml">
+                <notebook position="inside">
+                    <page string="Localización Peru">
+                        <group>
+                            <field name="state_vat" readonly='0' style="color: red"/>
+                            <field name="retencion" widget="selection"/>
+                            <field name="percepcion" widget="selection"/>
+                        </group>
+                    </page>
+                </notebook>
+                <field name="name" position="before">
+                        <field name="vat" placeholder="RUC" on_change="search_vat(vat)"
+                               help="Ingrese el RUC correcto y verificaremos los datos en SUNAT" />
+                </field>
+                <field name="category_id" position="after">
+                        <field name="document_type" string="Tipo Documento" widget="selection"/>
+                        <field name="firts_name"  placeholder="Nombre(s)" attrs="{'invisible': [('is_company','=', True)]}"  />
+                        <field name="last_name1"  placeholder="Apellido Paterno" attrs="{'invisible': [('is_company','=', True)]}"  />
+                        <field name="last_name2"  placeholder="Apellido Materno" attrs="{'invisible': [('is_company','=', True)]}"  />
+                        <field name="nro_documento"  placeholder="Numero Documento" attrs="{'invisible': [('is_company','=', True)]}"  />
+                        <field name="social_reason"  placeholder="Razón Social"  />
+                        <field name="trade_name"  placeholder="Nombre Comercial" attrs="{'invisible': [('is_company','=', True)]}" />
+                </field>
+                <xpath expr="//form/sheet/group/field[@name='function']" position="after">
+                    <field name="firts_name"/>
+                    <field name="last_name1"/>
+                    <field name="last_name2"/>
+                    <field name="document_type"/>
+                    <field name="nro_documento"/>
+                </xpath>
+            </field>
+        </record>
+
+
+        <!--   CLIENTE PROVEEDOR  -->
+        <record model="ir.ui.view" id="base_view_partner_tree">
+            <field name="name">res.partner.tree</field>
+            <field name="model">res.partner</field>
+            <field name="type">tree</field>
+            <field name="inherit_id" ref="base.view_partner_tree" />
+            <field name="arch" type="xml">
+                <xpath expr="/tree/field[@name='phone']" position="before">
+                    <field name="vat"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>

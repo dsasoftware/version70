@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<openerp>
+<data>
+    <!-- Add field province_id, district_id to res.company-->
+    <record model="ir.ui.view" id="view_company_form_toponyms">
+        <field name="name">res.company.form.toponyms</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form"/>
+        <field name="arch" type="xml">
+            <field name='city' position='replace'/>
+            <field name='country_id' position='replace'/>
+            <field name='state_id' position='replace'/>
+            <field name='zip' position='replace'/>
+
+            <field name='street2' position="after">
+                <field name="city" invisible='1'/>
+                <field name="country_id" placeholder='País' options='{"no_open": True}'/>
+                <field name="state_id" placeholder='Departamento' options='{"no_open": True}' domain="[('country_id','=',country_id)]"/>
+                <field name="province_id" domain="[('state_id','=',state_id)]" placeholder='Provincia' options='{"no_open": True}' />
+                <field name="district_id" domain="[('province_id','=',province_id)]" placeholder='Distrito' options='{"no_open": True}' />
+                <field name="zip" placeholder='Cod. Postal'/>
+
+            </field>
+        </field>
+    </record>
+
+</data>
+</openerp>

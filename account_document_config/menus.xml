@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+       <menuitem name="Config. Tipo Doc" id="sale_typedocument_config" parent="l10n_pe_yaros.admin_cont_config_peru"
+		    action="action_sale_typedocument_config"/>
+    </data>
+</openerp>

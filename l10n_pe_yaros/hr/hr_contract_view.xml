@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+	<!-- Ocupacion -->
+	<record model="ir.ui.view" id="pe_hr_ocupation_form_view">
+            <field name="name">Ocupación</field>
+            <field name="model">hr.employee.ocupation</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+				<form string="Ocupación">
+						<group>
+							<field name="code"/>
+							<field name="name"/>
+							<field name="abriv"/>
+						</group>
+				</form>
+            </field>
+     </record>
+     <record model="ir.ui.view" id="pe_hr_ocupation_tree_view">
+            <field name="name">Ocupación</field>
+            <field name="model">hr.employee.ocupation</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+				<tree string="Nivel Educación">
+							<field name="code"/>
+							<field name="name"/>
+							<field name="abriv"/>
+				</tree>
+            </field>
+     </record>
+	 <record model="ir.actions.act_window" id="pe_rh_ocupation_form_view">
+         	<field name="name">Ocupación</field>
+                <field name="res_model">hr.employee.ocupation</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">tree,form</field>
+     </record>
+
+
+	<!-- Tipo de Empleado -->
+	<record model="ir.ui.view" id="pe_hr_tipoempleado_form_view">
+            <field name="name">Tipo Empleado</field>
+            <field name="model">hr.contract.typeemploye</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+				<form string="Tipo Empleado">
+						<group>
+							<field name="code"/>
+							<field name="name"/>
+							<field name="abriv"/>
+						</group>
+				</form>
+            </field>
+     </record>
+     <record model="ir.ui.view" id="pe_hr_tipoempleado_tree_view">
+            <field name="name">Tipo Empleado</field>
+            <field name="model">hr.contract.typeemploye</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+				<tree string="Tipo Empleado">
+							<field name="code"/>
+							<field name="name"/>
+							<field name="abriv"/>
+				</tree>
+            </field>
+     </record>
+	 <record model="ir.actions.act_window" id="action_pe_rh_tipoempleado_form_view">
+         	<field name="name">Tipo Empleado</field>
+                <field name="res_model">hr.contract.typeemploye</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">tree,form</field>
+     </record>
+
+	<!-- Regimen Pensionario -->
+	<record model="ir.ui.view" id="pe_hr_regimenp_form_view">
+            <field name="name">Regimen Pensionario</field>
+            <field name="model">hr.contract.regimenpensionario</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+				<form string="Regimen Pensionario">
+						<group>
+							<field name="code"/>
+							<field name="name"/>
+							<field name="abriv"/>
+						</group>
+				</form>
+            </field>
+     </record>
+     <record model="ir.ui.view" id="pe_hr_regimenp_tree_view">
+            <field name="name">Regimen Pensionario</field>
+            <field name="model">hr.contract.regimenpensionario</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+				<tree string="Regimen Pensionario">
+							<field name="code"/>
+							<field name="name"/>
+							<field name="abriv"/>
+				</tree>
+            </field>
+     </record>
+	 <record model="ir.actions.act_window" id="action_pe_rh_regimenp_form_tree">
+         	<field name="name">Regimen Pensionario</field>
+                <field name="res_model">hr.contract.regimenpensionario</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">tree,form</field>
+     </record>
+
+
+		
+	<!-- Tipo de Contrato -->
+	<record model="ir.ui.view" id="pe_hr_tipocontrato_form_view">
+            <field name="name">Tipo Contrato Sunat</field>
+            <field name="model">hr.contract.types</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+				<form string="Tipo Contrato">
+						<group>
+							<field name="code"/>
+							<field name="name"/>
+							<field name="abriv"/>
+						</group>
+				</form>
+            </field>
+     </record>
+     <record model="ir.ui.view" id="pe_hr_tipocontrato_tree_view">
+            <field name="name">Tipo Contrato Sunat</field>
+            <field name="model">hr.contract.types</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+				<tree string="Tipo Contrato">
+							<field name="code"/>
+							<field name="name"/>
+							<field name="abriv"/>
+				</tree>
+            </field>
+     </record>
+	 <record model="ir.actions.act_window" id="action_pe_rh_tipocntrato_form_view">
+         	<field name="name">Tipo Contrato Sunat</field>
+                <field name="res_model">hr.contract.types</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">tree,form</field>
+     </record>
+
+
+	
+	<!-- Motivo Baja-->
+	<record model="ir.ui.view" id="pe_hr_motivobaja_form_view">
+            <field name="name">Motivo Baja</field>
+            <field name="model">hr.contract.motivobaja</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+				<form string="Motivo Baja">
+						<group>
+							<field name="code"/>
+							<field name="name"/>
+							<field name="abriv"/>
+						</group>
+				</form>
+            </field>
+     </record>
+     <record model="ir.ui.view" id="pe_hr_motivobaja_tree_view">
+            <field name="name">Motivo Baja</field>
+            <field name="model">hr.contract.motivobaja</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+				<tree string="Motivo Baja">
+							<field name="code"/>
+							<field name="name"/>
+							<field name="abriv"/>
+				</tree>
+            </field>
+     </record>
+	 <record model="ir.actions.act_window" id="action_pe_rh_motivobaja_form_tree">
+         	<field name="name">Motivo Baja</field>
+                <field name="res_model">hr.contract.motivobaja</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">tree,form</field>
+     </record>
+
+
+	<!-- Movilidad Formativa-->
+	<record model="ir.ui.view" id="pe_hr_movformativa_form_view">
+            <field name="name">Movilidad Formativa</field>
+            <field name="model">hr.contract.movilidadformativa</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+				<form string="Movilidad Formativa">
+						<group>
+							<field name="code"/>
+							<field name="name"/>
+							<field name="abriv"/>
+						</group>
+				</form>
+            </field>
+     </record>
+     <record model="ir.ui.view" id="pe_hr_movformativa_tree_view">
+            <field name="name">Movilidad Formativa</field>
+            <field name="model">hr.contract.movilidadformativa</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+				<tree string="Movilidad Formativa">
+							<field name="code"/>
+							<field name="name"/>
+							<field name="abriv"/>
+				</tree>
+            </field>
+     </record>
+	 <record model="ir.actions.act_window" id="action_pe_rh_movformativa_form_tree">
+         	<field name="name">Motivo Baja</field>
+                <field name="res_model">hr.contract.movilidadformativa</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">tree,form</field>
+     </record>
+
+	<!-- Categoria Ocupacional-->
+	<record model="ir.ui.view" id="pe_hr_categoriaocup_form_view">
+            <field name="name">Categoria Ocupacional</field>
+            <field name="model">hr.contract.categoriaocupacional</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+				<form string="Categoria Ocupacional">
+						<group>
+							<field name="code"/>
+							<field name="name"/>
+							<field name="abriv"/>
+						</group>
+				</form>
+            </field>
+     </record>
+     <record model="ir.ui.view" id="pe_hr_categoriaocup_tree_view">
+            <field name="name">Categoria Ocupacional</field>
+            <field name="model">hr.contract.categoriaocupacional</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+				<tree string="Categoria Ocupacional">
+							<field name="code"/>
+							<field name="name"/>
+							<field name="abriv"/>
+				</tree>
+            </field>
+     </record>
+	 <record model="ir.actions.act_window" id="action_pe_rh_categoriaocup_form_tree">
+         	<field name="name">Categoria Ocupacional</field>
+                <field name="res_model">hr.contract.categoriaocupacional</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">tree,form</field>
+     </record>
+
+
+	<!-- Ocupacional Privado-->
+	<record model="ir.ui.view" id="pe_hr_ocupprivate_form_view">
+            <field name="name">Ocupación Aplicable Priv.</field>
+            <field name="model">hr.contract.ocupacionalprivate</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+				<form string="Ocupación Aplicable Priv.">
+						<group>
+							<field name="code"/>
+							<field name="name"/>
+							<field name="abriv"/>
+						</group>
+				</form>
+            </field>
+     </record>
+     <record model="ir.ui.view" id="pe_hr_ocupprivate_tree_view">
+            <field name="name">Ocupación Aplicavle Priv.</field>
+            <field name="model">hr.contract.ocupacionalprivate</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+				<tree string="Ocupación Aplicable Priv.">
+							<field name="code"/>
+							<field name="name"/>
+							<field name="abriv"/>
+				</tree>
+            </field>
+     </record>
+	 <record model="ir.actions.act_window" id="action_pe_rh_ocupprivate_form_tree">
+         	<field name="name">Ocupación Aplicable Priv.</field>
+                <field name="res_model">hr.contract.ocupacionalprivate</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">tree,form</field>
+     </record>
+
+	<!-- Tipo Suspención Laboral-->
+	<record model="ir.ui.view" id="pe_hr_suspentiontype_form_view">
+            <field name="name">Tipo Suspención</field>
+            <field name="model">hr.contract.suspentiontype</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+				<form string="Tipo Suspención">
+						<group>
+							<field name="code"/>
+							<field name="name"/>
+							<field name="abriv"/>
+						</group>
+				</form>
+            </field>
+     </record>
+     <record model="ir.ui.view" id="pe_hr_suspentiontype_tree_view">
+            <field name="name">Tipo Suspención</field>
+            <field name="model">hr.contract.suspentiontype</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+				<tree string="Tipo Suspención">
+							<field name="code"/>
+							<field name="name"/>
+							<field name="abriv"/>
+				</tree>
+            </field>
+     </record>
+	 <record model="ir.actions.act_window" id="action_pe_rh_suspentiontype_form_tree">
+         	<field name="name">Tipo Suspención</field>
+                <field name="res_model">hr.contract.suspentiontype</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">tree,form</field>
+     </record>
+
+
+	<!-- Heredando el FORM de Contratos -->
+	<record id="pe_form_hr_contract" model="ir.ui.view">
+            <field name="name">hr.contract.form</field>
+            <field name="model">hr.contract</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+            <field name="arch" type="xml">
+				<notebook position="inside">
+                    <page string="Localización Peru">
+                        <group>
+                            <field name="regimenpensionario"/>
+                            <field name="categoriaocupacional"/>
+                            <field name="ocupacionalprivate"/>
+                            <field name="ocupation"/>
+                            <field name="employetype"/>
+                            <field name="typecontract"/>
+                            <field name="movilidadformativa"/>
+                            <field name="motivobaja"/>
+                            <field name="suspentiontype"/>
+                        </group>
+                    </page>
+                </notebook>
+             </field>
+      </record>
+    	 		 		 	
+    </data>
+</openerp>
+

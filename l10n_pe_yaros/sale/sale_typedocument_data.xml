@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+		<!--TIPOS DE DOCUMENTOS GENERICOS-->
+        <record model="sale.typedocument" ><field name="name">FACTURA</field><field name="cod_sunat">01</field>
+			<field name="is_active">1</field><field name="is_venta">1</field><field name="is_compra">1</field>
+		</record>
+        <record model="sale.typedocument" ><field name="name">RECIBO HONORARIOS</field><field name="cod_sunat">02</field>
+			<field name="is_active">1</field><field name="is_venta">0</field><field name="is_compra">1</field>
+		</record>
+		<record model="sale.typedocument" ><field name="name">BOLETA</field><field name="cod_sunat">03</field>
+			<field name="is_active">1</field><field name="is_venta">1</field><field name="is_compra">1</field>
+		</record>
+        <record model="sale.typedocument" ><field name="name">NOTA CREDITO</field><field name="cod_sunat">07</field>
+			<field name="is_active">1</field><field name="is_venta">1</field><field name="is_compra">1</field>
+		</record>
+		<record model="sale.typedocument" ><field name="name">NOTA DEBITO</field><field name="cod_sunat">08</field>
+			<field name="is_active">1</field><field name="is_venta">1</field><field name="is_compra">1</field>
+		</record>
+    </data>
+</openerp>

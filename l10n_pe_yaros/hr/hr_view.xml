@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+	<!-- Tipo de Documento -->
+	<record model="ir.ui.view" id="pe_base_typedoc_form">
+            <field name="name">Tipo Documento</field>
+            <field name="model">pe.base.typedoc</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+				<form string="Tipo Documento">				
+					<group>
+							<field name="code"/>
+							<field name="name"/>
+					</group>				
+                </form>
+            </field>
+     </record>
+     <record model="ir.ui.view" id="pe_base_typedoc_tree_view">
+            <field name="name">Tipo Documento</field>
+            <field name="model">pe.base.typedoc</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+				<tree string="Tipo Documento">
+							<field name="code"/>
+							<field name="name"/>
+				</tree>
+            </field>
+     </record>
+	 <record model="ir.actions.act_window" id="pe_base_typedoc_form_view">
+         	<field name="name">Tipo Documento</field>
+                <field name="res_model">pe.base.typedoc</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">tree,form</field>
+     </record>
+
+	<!-- Nivel Educacion -->
+	<record model="ir.ui.view" id="pe_rh_education_level_form_view">
+            <field name="name">Nivel Educacion</field>
+            <field name="model">hr.employee.educationlevel</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+				<form string="Nivel Educación">				
+					<group>
+							<field name="code"/>
+							<field name="name"/>
+							<field name="abriv"/>
+					</group>				
+                </form>
+            </field>
+     </record>
+     <record model="ir.ui.view" id="pe_educationlevel_tree_view">
+            <field name="name">Nivel Educacion</field>
+            <field name="model">hr.employee.educationlevel</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+				<tree string="Nivel Educación">
+							<field name="code"/>
+							<field name="name"/>
+							<field name="abriv"/>
+				</tree>
+            </field>
+     </record>
+	 <record model="ir.actions.act_window" id="pe_rh_educationlevel_form_view">
+         	<field name="name">Tipo Trabajador</field>
+                <field name="res_model">hr.employee.educationlevel</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">tree,form</field>
+     </record>
+	<!-- Situacion Trabajador -->
+	<record model="ir.ui.view" id="pe_hr_situacion_form_view">
+            <field name="name">Situacion Laboral</field>
+            <field name="model">hr.employee.situacion</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+				<form string="Situación Laboral">
+						<group>
+							<field name="code"/>
+							<field name="name"/>
+							<field name="abriv"/>
+						</group>
+				</form>
+            </field>
+     </record>
+     <record model="ir.ui.view" id="pe_hr_situacion_tree_view">
+            <field name="name">Situación Laboral</field>
+            <field name="model">hr.employee.situacion</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+				<tree string="Situación Laboral">
+							<field name="code"/>
+							<field name="name"/>
+							<field name="abriv"/>
+				</tree>
+            </field>
+     </record>
+	 <record model="ir.actions.act_window" id="pe_rh_sitacion_form_tree">
+         	<field name="name">Situación Laboral</field>
+                <field name="res_model">hr.employee.situacion</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">tree,form</field>
+     </record>
+
+	<!-- Heredando el FORM de Empleados -->
+	<record id="pe_form_hr_employee" model="ir.ui.view">
+            <field name="name">hr.employee.form</field>
+            <field name="model">hr.employee</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+				
+				<xpath expr="/form//field[@name='country_id']" position="replace">
+                    <field name="typedoc"/>
+                    <field name="numtypedoc"/>
+                    <field name="firts_name"/>
+                    <field name="last_name"/>
+                    <field name="last_name1"/>
+                    <field name="person_celular"/>
+                    <field name="person_phone"/>
+                    <field name="person_email"/>
+                    <field name="person_situacion"/>
+                    <field name="person_tipo_pago"/>
+                    <field name="person_ruc"/>
+                    <field name="identification_id" invisible="1"/>
+                    
+                </xpath>
+                <xpath expr="/form//field[@name='address_home_id']" position="replace">
+					<field name="country_id"/>
+                    <field name="home_state" domain="[('country_id','=',country_id)]" options='{"no_open": True}'/>
+                    <field name="home_province" domain="[('state_id','=',home_state)]"/>
+                    <field name="home_district" domain="[('province_id','=',home_province)]"/>
+                    <field name="home_via"/>
+					<field name="home_zona"/>				
+					<field name="address_home_id"/>
+					<group string="Educación" colspan="2">
+						<field name="person_educationlevel"/>
+						<field name="person_dateegress"/>
+						<field name="person_specialty"/>
+						<field name="person_studycenter"/>						
+					</group>
+				
+                </xpath>
+                <xpath expr="/form//field[@name='birthday']" position="before">
+                    
+                    <field name="country_id" options='{"no_open": True}'/>
+                    <field name="birth_state" domain="[('country_id','=',country_id)]"/>
+                    <field name="birth_province" domain="[('state_id','=',birth_state)]"/>
+                    <field name="birth_district" domain="[('province_id','=',birth_province)]"/>
+                </xpath>
+                <xpath expr="/form//field[@name='gender']" position="before">
+					<field name="person_blood_group"/>
+                </xpath>         
+                
+            </field>
+	</record>
+        
+	
+    </data>
+</openerp>
+

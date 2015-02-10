@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- VENTAS Y COMPRAS TREE   -->
+        <record model="ir.ui.view" id="account_invoice_tree">
+            <field name="name">account.invoice.tree</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_tree" />
+            <field name="arch" type="xml">
+                <field name="number" position="replace">
+                     <field name="serie" />
+                    <field name="correlativo" />
+                </field>
+            </field>
+        </record>
+
+        <!-- COMPRAS  FORM -->
+        <record model="ir.ui.view" id="account_invoice_supplier_form">
+            <field name="name">account.invoice.supplier.form</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_supplier_form" />
+            <field name="arch" type="xml">
+                <field name="date_due" position="replace"/>
+                <field name="date_invoice" position="after">
+                    <field name="date_due"/>
+                </field>
+                <field name="fiscal_position" position="after">
+                    <field name="sale_type_document" domain="[('is_compra','=',True)]" widget="selection"/>
+                </field>
+                <field name="origin" position="replace">
+                    <field name="serie" required="True" />
+                </field>
+                <field name="supplier_invoice_number" position="replace">
+                    <field name="correlativo" required="True"/>
+                </field>
+                <field name="reference" position="replace" ></field>
+                <field name="journal_id" position="after">
+                    <field name="origin" />
+                </field>
+                <notebook position="inside">
+                    <page string="Localización Peruana" >
+                        <group>
+                            <field name="detraccion_id"/>
+                            <field name="retencion_id"/>
+                            <field name="amount_type"/>
+                        </group>
+                    </page>
+                </notebook>
+            </field>
+        </record>
+
+        <!--   VENTAS FORM   -->
+        <record model="ir.ui.view" id="account_invoice_form">
+            <field name="name">account.invoice.form</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form" />
+            <field name="arch" type="xml">
+                <field name="date_due" position="replace"/>
+                <field name="date_invoice" position="after">
+                    <field name="date_due"/>
+                </field>
+                <field name="fiscal_position" position="before">
+                    <field name="sale_type_document" domain="[('is_venta','=',True)]" widget="selection"/>
+                    <field name="serie" required="True"/>
+                    <field name="correlativo" required="True"/>
+                </field>
+				<field name="payment_term" position="before">
+                    <field name="amount_text" readonly="1"/>
+                </field>
+                <notebook position="inside">
+                    <page string="Localización Peruana" >
+                        <group>
+                            <field name="detraccion_id" attrs="{'invisible':[('detraccion_id','=',False)]}" />
+                            <field name="retencion_id" attrs="{'invisible':[('retencion_id','=',False)]}"/>
+                            <field name="amount_type"/>
+                        </group>
+                    </page>
+                </notebook>
+            </field>
+        </record>
+    </data>
+</openerp>

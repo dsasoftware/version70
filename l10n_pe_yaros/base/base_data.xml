@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+		<!--  Via  -->
+		<record model="res.country.via" ><field name="name">AVENIDA</field><field name="code">01</field><field name="abrev">Av.</field></record>
+		<record model="res.country.via" ><field name="name">JIRON</field><field name="code">02</field><field name="abrev">Jr.</field></record>
+		<record model="res.country.via" ><field name="name">CALLE</field><field name="code">03</field><field name="abrev">Calle</field></record>
+		<record model="res.country.via" ><field name="name">PASAJE</field><field name="code">04</field><field name="abrev">Psj.</field></record>
+		<record model="res.country.via" ><field name="name">ALAMEDA</field><field name="code">05</field><field name="abrev">Alameda</field></record>
+		<record model="res.country.via" ><field name="name">MALECÓN</field><field name="code">06</field><field name="abrev">Malecon</field></record>
+		<record model="res.country.via" ><field name="name">OVALO</field><field name="code">07</field><field name="abrev">Ovalo</field></record>
+		<record model="res.country.via" ><field name="name">PARQUE</field><field name="code">08</field><field name="abrev">Parque</field></record>
+		<record model="res.country.via" ><field name="name">PLAZA</field><field name="code">09</field><field name="abrev">Plaza</field></record>
+		<record model="res.country.via" ><field name="name">CARRETERA</field><field name="code">10</field><field name="abrev">Carretera</field></record>
+		<record model="res.country.via" ><field name="name">TROCHA</field><field name="code">13</field><field name="abrev">Trocha</field></record>
+		<record model="res.country.via" ><field name="name">CAMINO RURAL</field><field name="code">14</field><field name="abrev">Camino Rural</field></record>
+		<record model="res.country.via" ><field name="name">BAJADA</field><field name="code">15</field><field name="abrev">Bajada</field></record>
+		<record model="res.country.via" ><field name="name">GALERIA</field><field name="code">16</field><field name="abrev">Galeria</field></record>
+		<record model="res.country.via" ><field name="name">PROLONGACIÓN </field><field name="code">17</field><field name="abrev">Prolog.</field></record>
+		<record model="res.country.via" ><field name="name">PASEO</field><field name="code">18</field><field name="abrev">Paseo</field></record>
+		<record model="res.country.via" ><field name="name">PLAZUELA</field><field name="code">19</field><field name="abrev">Plazuela</field></record>
+		<record model="res.country.via" ><field name="name">PORTAL</field><field name="code">20</field><field name="abrev" >Portal</field></record>
+		<record model="res.country.via" ><field name="name">CAMINO AFIRMADO</field><field name="code">21</field><field name="abrev">Camino Afirmado</field></record>
+		<record model="res.country.via" ><field name="name">TROCHA CARROZABLE</field><field name="code">22</field><field name="abrev">Trocha Carrozable</field></record>
+		<record model="res.country.via" ><field name="name">OTROS</field><field name="code">99</field><field name="abrev">Otros</field></record>
+
+		<!-- Zona -->
+		<record model="res.country.zona"><field name="name">URBANIZACIÓN</field><field name="code">01</field><field name="abrev">URB.</field></record>
+		<record model="res.country.zona"><field name="name">PUEBLO JOVEN</field><field name="code">02</field><field name="abrev">P.J.</field></record>
+		<record model="res.country.zona"><field name="name">UNIDAD VECINAL</field><field name="code">03</field><field name="abrev">A.V.</field></record>
+		<record model="res.country.zona"><field name="name">CONJUNTO HABITACIONAL</field><field name="code">04</field><field name="abrev">C.H.</field></record>
+		<record model="res.country.zona"><field name="name">ASENTAMIENTO HUMANO</field><field name="code">05</field><field name="abrev">A.H.</field></record>
+		<record model="res.country.zona"><field name="name">COOPERATIVA</field><field name="code">06</field><field name="abrev">COO</field></record>
+		<record model="res.country.zona"><field name="name">rESIDENCIAL</field><field name="code">07</field><field name="abrev">RES</field></record>
+		<record model="res.country.zona"><field name="name">ZONA INDUSTRIAL</field><field name="code">08</field><field name="abrev">Z.I.</field></record>
+		<record model="res.country.zona"><field name="name">GRUPO</field><field name="code">09</field><field name="abrev">GRU.</field></record>
+		<record model="res.country.zona"><field name="name">CASERÍO</field><field name="code">10</field><field name="abrev">CAS.</field></record>
+		<record model="res.country.zona"><field name="name">FUNDO</field><field name="code">11</field><field name="abrev">FND.</field></record>
+		<record model="res.country.zona"><field name="name">OTROS</field><field name="code">99</field><field name="abrev">Otros</field></record>
+ 
+
+    </data>
+</openerp>
