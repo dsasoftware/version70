@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- Config. Ret/Detra/Percep -->
+        <record model="ir.ui.view" id="account_voucher_type_tree">
+            <field name="name">Config. SPOT</field>
+            <field name="model">account.spot</field>
+            <field name="arch" type="xml">
+                <tree string="Config. SPOT" >
+                    <field name="sunat_code"/>
+                    <field name="name"/>
+                    <field name="account_journal_id"/>
+
+                    <field name="account_journal_id_purchase"/>
+
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="account_voucher_type_form">
+            <field name="name">Config. SPOT</field>
+            <field name="model">account.spot</field>
+            <field name="arch" type="xml">
+                <form string="Config. Ret/Detra/Percep" >
+                    <group>
+                        <field name="sunat_code"/>
+                        <field name="name"/>
+                        <field name="account_journal_id" widget="selection"/>
+                        <!-- <field name="account_account_id" /> -->
+                        <field name="account_journal_id_purchase" widget="selection"/>
+                        <!-- <field name="account_account_id_purchase" /> -->
+
+                    </group>
+                    <notebook position="inside">
+                        <page string="Detraciones" >
+                            <field name="account_spot_detraccion_ids" >
+                                <tree editable="buttom">
+                                    <field name="cod_sunat"/>
+                                    <field name="name" />
+                                    <field name="percentage"/>
+                                    <field name="amount"/>
+                                    <field name="state"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Retenciones" >
+                            <field name="account_spot_retencion_ids">
+                                <tree editable="buttom">
+                                    <field name="cod_sunat"/>
+                                    <field name="name" />
+                                    <field name="percentage"/>
+                                    <field name="amount"/>
+                                    <field name="state"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Percepciones" >
+                            <field name="account_spot_percepcion_ids">
+                                <tree editable="buttom">
+                                    <field name="cod_sunat"/>
+                                    <field name="name" />
+                                    <field name="percentage"/>
+                                    <field name="amount"/>
+                                    <field name="state"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="open_account_voucher_type">
+            <field name="name">Config. SPOT</field>
+            <field name="res_model">account.spot</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="account_voucher_type_tree"/>
+        </record>
+
+    </data>
+</openerp>

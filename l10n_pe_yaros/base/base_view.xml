@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+    <!-- Menu Pais -->
+    <record model="ir.actions.act_window" id="action_country_1">
+			<field name="name">Pais</field>
+			<field name="res_model">res.country</field>
+			<field name="view_mode">tree,form</field>
+	</record>        
+
+		
+	<!-- menu Departamento -->	
+	<record model="ir.actions.act_window" id="action_country_state">
+			<field name="name">Departamento</field>
+			<field name="res_model">res.country.state</field>
+			<field name="view_mode">tree,form</field>
+	</record>        
+
+	
+	<!-- menu Provincia  -->	
+	<record model="ir.actions.act_window" id="action_country_province">
+			<field name="name">Provincias</field>
+			<field name="res_model">res.country.province</field>
+			<field name="view_mode">tree,form</field>
+	</record>        	
+
+	
+	<!-- Menu Distrito  -->	
+	<record model="ir.actions.act_window" id="action_country_distrito">
+			<field name="name">Provincias</field>
+			<field name="res_model">res.country.district</field>
+			<field name="view_mode">tree,form</field>
+	</record>  
+
+	
+	<!-- Administrador Vias -->
+		<record model="ir.ui.view" id="res_country_via_form">
+			<field name="name">res.country.via</field>
+			<field name="model">res.country.via</field>
+			<field name="arch" type="xml">
+				<form string="Via">
+				<group>
+					<group>
+						<field name='code' />
+						<field name='name' />
+						<field name='abrev' />
+					</group>
+				</group>
+				</form>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="res_country_via_view">
+			<field name="name">res.country.via</field>
+			<field name="model">res.country.via</field>
+			<field name="arch" type="xml">
+				<tree string="Via">
+					<field name='code' />
+					<field name='name' />
+					<field name='abrev' />
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_country_via">
+			<field name="name">Via</field>
+			<field name="res_model">res.country.via</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>        
+       
+
+        
+	<!-- Administrador Zonas -->
+		<record model="ir.ui.view" id="res_country_zonas_form">
+			<field name="name">res.country.zona</field>
+			<field name="model">res.country.zona</field>
+			<field name="arch" type="xml">
+				<form string="Zonas">
+				  <group>
+					<group>
+					<field name='code' />
+					<field name='name' />
+					<field name='abrev'/>
+					</group>
+				  </group>
+				</form>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="res_country_zonas_view">
+			<field name="name">res.country.zona</field>
+			<field name="model">res.country.zona</field>
+			<field name="arch" type="xml">
+				<tree string="Zonas">
+					<field name='code' />
+					<field name='name' />
+					<field name='abrev'/>
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_country_zonas">
+			<field name="name">Zona</field>
+			<field name="res_model">res.country.zona</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>        
+       
+
+
+    </data>
+</openerp>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!--Scheduler-->
+        <record id="cron_check_uds" model="ir.cron">
+            <field name="active" eval="True"/>
+            <field name="name">Actualizacion de USD</field>
+            <field name="interval_number">8</field>
+            <field name="interval_type">hours</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field name="model" eval="'res.currency'"/>
+            <field name="function" eval="'check_expired_contracts'"/>
+            <field name="args" eval="'()'" />
+        </record>
+    </data>
+</openerp>

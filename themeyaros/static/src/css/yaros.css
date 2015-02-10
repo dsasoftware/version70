@@ -1,0 +1,10 @@
+@CHARSET "UTF-8";
+
+
+.navbar-collapse.collapse {
+    background: #0069aa;
+}
+
+.openerp .announcement_bar {
+    display: none;
+}

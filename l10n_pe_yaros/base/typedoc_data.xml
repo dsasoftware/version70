@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data noupdate="0">
+		<record model="pe.base.typedoc">
+            <field name="name">0-OTROS TIPOS DE DOCUMENTOS</field>
+            <field name="code">0</field>
+        </record>
+        <record model="pe.base.typedoc" >
+            <field name="name">1-DOCUMENTO NACIONAL DE IDENTIDAD (DNI)</field>
+            <field name="code">1</field>
+        </record>
+        <record model="pe.base.typedoc">
+            <field name="name">4-CARNET DE EXTRANJERIA</field>
+            <field name="code">4</field>
+        </record>
+        <record model="pe.base.typedoc">
+            <field name="name">6-REGISTRO ÚNICO DE CONTRIBUYENTES</field>
+            <field name="code">6</field>
+        </record>
+        <record model="pe.base.typedoc" >
+            <field name="name">7-PASAPORTE</field>
+            <field name="code">7</field>
+        </record>
+        <record model="pe.base.typedoc">
+            <field name="name">A-CÉDULA DIPLOMÁTICA DE IDENTIDAD</field>
+            <field name="code">A</field>
+        </record>
+    </data>
+</openerp>

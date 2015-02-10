@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+		<record model="ir.ui.view" id="res_company_view">
+			<field name="name">res.company</field>
+			<field name="model">res.company</field>
+			<field name="type">form</field>
+			<field name="inherit_id" ref="base.view_company_form"/>
+			<field name="arch" type="xml">
+                <notebook position="inside">
+                    <page string="Localización Peru">
+                        <group>
+                            <field name="nombre_comercial"/>
+					        <field name="activitytype"/>
+                        </group>
+                </page>
+                </notebook>
+			</field>
+		</record>
+
+
+	<!-- Tipo de Actividad -->
+	<record model="ir.ui.view" id="pe_account_template_activity_type_form_view">
+            <field name="name">Tipo de Actividad</field>
+            <field name="model">res.company.activitytype</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+				<form string="Tipo de Actividad" version='7.0'>
+				<sheet>
+					<group>
+							<field name="code"/>
+							<field name="name"/>
+					</group>
+				</sheet>
+                </form>
+            </field>
+     </record>
+     <record model="ir.ui.view" id="pe_account_template_pe_activitytype_tree_view">
+            <field name="name">Tipo de Actividad</field>
+            <field name="model">res.company.activitytype</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+				<tree string="Tipo Actividad">
+							<field name="code"/>
+							<field name="name"/>
+				</tree>
+            </field>
+     </record>
+	 <record model="ir.actions.act_window" id="action_pe_account_template_rh_activitytype_form_view">
+         	<field name="name">Tipo de Actividad</field>
+                <field name="res_model">res.company.activitytype</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">tree,form</field>
+     </record>
+
+
+	
+
+    </data>
+</openerp>

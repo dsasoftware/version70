@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data >
+        <!-- Payment Mode -->
+        <record id="view_payment_mode_tree1" model="ir.ui.view">
+            <field name="name">payment.mode.tree</field>
+            <field name="model">payment.mode</field>
+            <field name="inherit_id" ref="account_payment.view_payment_mode_tree"/>
+            <field name="arch" type="xml">
+                <field name="journal" position="before">
+                    <field name="mode_id"/>
+                </field>
+            </field>
+        </record>
+        <record id="view_payment_mode_form1" model="ir.ui.view">
+            <field name="name">payment.mode.form</field>
+            <field name="model">payment.mode</field>
+            <field name="inherit_id" ref="account_payment.view_payment_mode_form"/>
+            <field name="arch" type="xml">
+                <field name="journal" position="before">
+                    <field name="mode_id" widget="selection"/>
+                </field>
+            </field>
+        </record>
+
+        <!--Payment  Mode Type -->
+        <record id="view_payment_mode_type_tree" model="ir.ui.view">
+            <field name="name">payment.mode.tree</field>
+            <field name="model">payment.mode.type</field>
+            <field name="arch" type="xml">
+                <tree string="Tipo Metodo de Pago" >
+                    <field name="sunat"/>
+                    <field name="name"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_payment_mode_type_form" model="ir.ui.view">
+            <field name="name">payment.mode.type.form</field>
+            <field name="model">payment.mode.type</field>
+            <field name="arch" type="xml">
+                <form string="Tipo Metodo de Pago" >
+                    <group>
+                        <field name="sunat"/>
+                        <field name="name"/>
+                        <field name="state"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="open_payment_mode_type">
+            <field name="name">Metodo de Pago</field>
+            <field name="res_model">payment.mode.type</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_payment_mode_type_tree"/>
+        </record>
+    </data>
+ </openerp>

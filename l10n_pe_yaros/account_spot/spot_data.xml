@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data noupdate="1">
+        <!--account.spot -->
+		<record model="account.spot" >
+            <field name="id">1</field>
+            <field name="name">DETRACCION</field>
+            <field name="sunat_code">DET</field>
+            <field name="account_journal_id">1</field>
+            <field name="account_journal_id_purchase">1</field>
+        </record>
+
+        <record model="account.spot" >
+            <field name="id">2</field>
+            <field name="name">RETENCION</field>
+            <field name="sunat_code">RET</field>
+            <field name="account_journal_id">1</field>
+            <field name="account_journal_id_purchase">1</field>
+
+        </record>
+        <record model="account.spot" >
+            <field name="id">3</field>
+            <field name="name">PERCEPCION</field>
+            <field name="sunat_code">PER</field>
+            <field name="account_journal_id">1</field>
+            <field name="account_journal_id_purchase">1</field>
+        </record>
+
+
+        <!--account.spot.detraccion
+		<record model="account.spot.detraccion" >
+            <field name="account_spot_id">1</field>
+            <field name="name">001 - AZUCAR</field>
+            <field name="cod_sunat">001</field>
+            <field name="percentage">10</field>
+        </record>
+        <record model="account.spot.detraccion" >
+            <field name="account_spot_id">1</field><field name="name">002 - Arroz Pilado</field>
+            <field name="cod_sunat">002</field><field name="percentage">12</field>
+        </record>
+        <record model="account.spot.detraccion" ><field name="account_spot_id">1</field><field name="name">003 - Alcohol etílico</field><field name="cod_sunat">003</field><field name="percentage">10</field></record>
+        <record model="account.spot.detraccion" ><field name="account_spot_id">1</field><field name="name">004 - Recursos hidrobiológicos</field><field name="cod_sunat">004</field><field name="percentage">9</field></record>
+        <record model="account.spot.detraccion" ><field name="account_spot_id">1</field><field name="name">005 - Maíz amarillo duro</field><field name="cod_sunat">005</field><field name="percentage">7</field></record>
+        <record model="account.spot.detraccion" ><field name="account_spot_id">1</field><field name="name">006 - Algodón</field><field name="cod_sunat">006</field><field name="percentage">15</field></record>
+        <record model="account.spot.detraccion" ><field name="account_spot_id">1</field><field name="name">007 - Caña de azúcar</field><field name="cod_sunat">007</field><field name="percentage">10</field></record>
+        <record model="account.spot.detraccion" ><field name="account_spot_id">1</field><field name="name">008 - Madera</field><field name="cod_sunat">008</field><field name="percentage">9</field></record>
+        <record model="account.spot.detraccion" ><field name="account_spot_id">1</field><field name="name">009 - Arena y piedra</field><field name="cod_sunat">009</field><field name="percentage">10</field></record>
+        <record model="account.spot.detraccion" ><field name="account_spot_id">1</field><field name="name">010 - Residuos, subproductos,desechos, recortes y desperdicios y formas primarias derivadas de los mismos (1)</field><field name="cod_sunat">010</field><field name="percentage">15</field></record>
+        <record model="account.spot.detraccion" ><field name="account_spot_id">1</field><field name="name">011 - Bienes gravados con el IGV, por renuncia a la exoneración (2)</field><field name="cod_sunat">011</field><field name="percentage">10</field></record>
+        <record model="account.spot.detraccion" ><field name="account_spot_id">1</field><field name="name">012 - Intermediacion laboral y tercerización</field><field name="cod_sunat">012</field><field name="percentage">12</field></record>
+        <record model="account.spot.detraccion" ><field name="account_spot_id">1</field><field name="name">013 - Animales vivos</field><field name="cod_sunat">013</field><field name="percentage">12</field></record>
+        <record model="account.spot.detraccion" ><field name="account_spot_id">1</field><field name="name">014 - Carnes y despojos comestibles</field><field name="cod_sunat">014</field><field name="percentage">12</field></record>
+        <record model="account.spot.detraccion" ><field name="account_spot_id">1</field><field name="name">015 - Abonos, cueros y pieles de origen animal</field><field name="cod_sunat">015</field><field name="percentage">12</field></record>
+		<record model="account.spot.detraccion" ><field name="account_spot_id">1</field><field name="name">016 - Aceite de pescado</field><field name="cod_sunat">016</field><field name="percentage">9</field></record>
+        <record model="account.spot.detraccion" ><field name="account_spot_id">1</field><field name="name">017 - Harina, polvo y ""pellets"" de pescado, crustáceos, moluscos y demás invertebrados acuáticos</field><field name="cod_sunat">017</field><field name="percentage">9</field></record>
+        <record model="account.spot.detraccion" ><field name="account_spot_id">1</field><field name="name">018 - Embarcaciones pesqueras</field><field name="cod_sunat">018</field><field name="percentage">9</field></record>
+        <record model="account.spot.detraccion" ><field name="account_spot_id">1</field><field name="name">019 - Arrendamiento de bienes muebles</field><field name="cod_sunat">019</field><field name="percentage">12</field></record>
+        <record model="account.spot.detraccion" ><field name="account_spot_id">1</field><field name="name">020 - Mantenimiento y reparación de bienes muebles</field><field name="cod_sunat">020</field><field name="percentage">9</field></record>
+        <record model="account.spot.detraccion" ><field name="account_spot_id">1</field><field name="name">021 - Movimiento de carga</field><field name="cod_sunat">021</field><field name="percentage">12</field></record>
+        <record model="account.spot.detraccion" ><field name="account_spot_id">1</field><field name="name">022 - Otros servicios empresariales</field><field name="cod_sunat">022</field><field name="percentage">12</field></record>
+        <record model="account.spot.detraccion" ><field name="account_spot_id">1</field><field name="name">023 - Leche</field><field name="cod_sunat">023</field><field name="percentage">4</field></record>
+        <record model="account.spot.detraccion" ><field name="account_spot_id">1</field><field name="name">024 - Comisión mercantil</field><field name="cod_sunat">024</field><field name="percentage">12</field></record>
+        <record model="account.spot.detraccion" ><field name="account_spot_id">1</field><field name="name">025 - Fabricación de bienes por encargo</field><field name="cod_sunat">025</field><field name="percentage">12</field></record>
+        <record model="account.spot.detraccion" ><field name="account_spot_id">1</field><field name="name">026 - Servicio de transporte de personas</field><field name="cod_sunat">026</field><field name="percentage">12</field></record>
+        <record model="account.spot.detraccion" ><field name="account_spot_id">1</field><field name="name">027 - Servicio de transporte de bienes realizado por vía terrestre</field><field name="cod_sunat">027</field><field name="percentage">12</field></record>
+        <record model="account.spot.detraccion" ><field name="account_spot_id">1</field><field name="name">028 - Servicio de transporte público de pasajeros realizado por vía terrestre</field><field name="cod_sunat">028</field><field name="percentage">12</field></record>
+        <record model="account.spot.detraccion" ><field name="account_spot_id">1</field><field name="name">029 - Algodón  en rama  sin desmontar (Código incorporado por el artículo 3° de la Resolución de Superintendencia N° 260-2009/SUNAT, publicada el 10.12.2009 y vigente a partir del 11.12.2009)</field><field name="cod_sunat">029</field><field name="percentage">12</field></record>
+        <record model="account.spot.detraccion" ><field name="account_spot_id">1</field><field name="name">030 - Contratos de construcción</field><field name="cod_sunat">030</field><field name="percentage">5</field></record>
+        <record model="account.spot.detraccion" ><field name="account_spot_id">1</field><field name="name">031 - Oro gravado con el IGV (2)</field><field name="cod_sunat">031</field><field name="percentage">9</field></record>
+        <record model="account.spot.detraccion" ><field name="account_spot_id">1</field><field name="name">032 - Páprika y otros frutos de los géneros capsicum o pimienta</field><field name="cod_sunat">032</field><field name="percentage">12</field></record>
+        <record model="account.spot.detraccion" ><field name="account_spot_id">1</field><field name="name">033 - Espárragos</field><field name="cod_sunat">033</field><field name="percentage">12</field></record>
+        <record model="account.spot.detraccion" ><field name="account_spot_id">1</field><field name="name">034 - Minerales metálicos no auriferos</field><field name="cod_sunat">034</field><field name="percentage">12</field></record>
+        <record model="account.spot.detraccion" ><field name="account_spot_id">1</field><field name="name">035 - Bienes exonerados del IGV (3)</field><field name="cod_sunat">035</field><field name="percentage">1.5</field></record>
+
+        <record model="account.spot.detraccion" ><field name="account_spot_id">1</field><field name="name">036 - Oro y demás minerales metálicos exonerados del IGV (3)</field><field name="cod_sunat">036</field><field name="percentage">5</field></record>
+        <record model="account.spot.detraccion" ><field name="account_spot_id">1</field><field name="name">038 - Espectáculos públicos no culturales (4)</field><field name="cod_sunat">038</field><field name="percentage">12</field></record>
+        <record model="account.spot.detraccion" ><field name="account_spot_id">1</field><field name="name">039 - Minerales no metálicos (3)</field><field name="cod_sunat">039</field><field name="percentage">6</field></record>
+
+        -->
+
+    </data>
+</openerp>

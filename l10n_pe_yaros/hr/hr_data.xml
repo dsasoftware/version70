@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data >
+        <!--hr.employee.educationlevel -->
+		<record model="hr.employee.educationlevel" >
+            <field name="code">01</field><field name="name">SIN EDUCACIÓN FORMAL</field><field name="abriv">SIN EDUCACIÓN FORMAL</field>
+        </record>
+        <record model="hr.employee.educationlevel" >
+            <field name="code">02</field><field name="name">EDUCACIÓN ESPECIAL INCOMPLETA</field><field name="abriv">ESPECIAL INCOMPLETA</field>
+        </record>
+        <record model="hr.employee.educationlevel" >
+            <field name="code">03</field><field name="name">EDUCACIÓN ESPECIAL COMPLETA</field><field name="abriv">ESPECIAL COMPLETA</field>
+        </record>
+        <record model="hr.employee.educationlevel" >
+            <field name="code">04</field><field name="name">EDUCACIÓN PRIMARIA INCOMPLETA</field><field name="abriv">PRIMARIA INCOMPLETA</field>
+        </record>
+        <record model="hr.employee.educationlevel" >
+            <field name="code">05</field><field name="name">EDUCACIÓN PRIMARIA COMPLETA</field><field name="abriv">PRIMARIA COMPLETA</field>
+        </record>
+        <record model="hr.employee.educationlevel" >
+            <field name="code">06</field><field name="name">EDUCACIÓN SECUNDARIA INCOMPLETA</field><field name="abriv">SECUNDARIA INCOMPLETA</field>
+        </record>
+        <record model="hr.employee.educationlevel" >
+            <field name="code">07</field><field name="name">EDUCACIÓN SECUNDARIA COMPLETA</field><field name="abriv">SECUNDARIA COMPLETA</field>
+        </record>
+        <record model="hr.employee.educationlevel" >
+            <field name="code">08</field><field name="name">EDUCACIÓN TÉCNICA INCOMPLETA</field><field name="abriv">TÉCNICA INCOMPLETA</field>
+        </record>
+        <record model="hr.employee.educationlevel" >
+            <field name="code">09</field><field name="name">EDUCACIÓN TÉCNICA COMPLETA</field><field name="abriv">TÉCNICA COMPLETA</field>
+        </record>
+        <record model="hr.employee.educationlevel" >
+            <field name="code">10</field><field name="name">EDUCACIÓN SUPERIOR (INSTITUTO SUPERIOR, ETC) INCOMPLETA</field><field name="abriv">SUPERIOR INCOMPLETA (INSTIT. SUPER)</field>
+        </record>
+        <record model="hr.employee.educationlevel" >
+            <field name="code">11</field><field name="name">EDUCACIÓN SUPERIOR (INSTITUTO SUPERIOR, ETC) COMPLETA</field><field name="abriv">SUPERIOR COMPLETA  (INSTIT SUPER)</field>
+        </record>
+        <record model="hr.employee.educationlevel" >
+            <field name="code">12</field><field name="name">EDUCACIÓN UNIVERSITARIA INCOMPLETA</field><field name="abriv">UNIVERSITARIA INCOMPLETA</field>
+        </record>
+        <record model="hr.employee.educationlevel" >
+            <field name="code">13</field><field name="name">EDUCACIÓN UNIVERSITARIA COMPLETA</field><field name="abriv">UNIVERSITARIA COMPLETA</field>
+        </record>
+        <record model="hr.employee.educationlevel" >
+            <field name="code">14</field><field name="name">GRADO DE BACHILLER</field><field name="abriv">GRADO DE BACHILLER</field>
+        </record>
+        <record model="hr.employee.educationlevel" >
+            <field name="code">15</field><field name="name">TITULADO</field><field name="abriv">TITULADO</field>
+        </record>
+        <record model="hr.employee.educationlevel" >
+            <field name="code">16</field><field name="name">ESTUDIOS DE MAESTRÍA INCOMPLETA</field><field name="abriv">ESTUD. MAESTRÍA INCOMPLETA</field>
+        </record>
+        <record model="hr.employee.educationlevel" >
+            <field name="code">17</field><field name="name">ESTUDIOS DE MAESTRÍA COMPLETA</field><field name="abriv">ESTUD. MAESTRÍA COMPLETA</field>
+        </record>
+        <record model="hr.employee.educationlevel" >
+            <field name="code">18</field><field name="name">GRADO DE MAESTRÍA</field><field name="abriv">GRADO DE MAESTRÍA</field>
+        </record>
+        <record model="hr.employee.educationlevel" >
+            <field name="code">19</field><field name="name">ESTUDIOS DE DOCTORADO INCOMPLETO</field><field name="abriv">ESTUD. DOCTORADO INCOMPLETO</field>
+        </record>
+        <record model="hr.employee.educationlevel" >
+            <field name="code">20</field><field name="name">ESTUDIOS DE DOCTORADO COMPLETO</field><field name="abriv">ESTUD. DOCTORADO COMPLETO</field>
+        </record>
+        <record model="hr.employee.educationlevel" >
+            <field name="code">21</field><field name="name">GRADO DE DOCTOR</field><field name="abriv">GRADO DE DOCTOR</field>
+        </record>
+
+    </data>
+</openerp>
